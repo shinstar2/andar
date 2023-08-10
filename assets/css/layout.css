@@ -1,0 +1,472 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+
+/* 이벤트슬라이드 */
+
+.event-slide{}
+.event-slide .swiper-wrapper{}
+.event-slide .swiper-wrapper .swiper-slide{
+    text-align: center;
+    background: #0f0f0f;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+.event-slide .swiper-wrapper .swiper-slide a{
+    color: #fff;
+}
+.event-slide .swiper-wrapper .swiper-slide .ad1 .strong{
+    color: #ee5728;
+}
+.event-slide .swiper-wrapper .swiper-slide .ad2 .strong{
+    font-weight: bold;
+}
+.event-slide .swiper-wrapper .swiper-slide .ad3 .strong{}
+
+
+
+header{
+    
+}
+header .header-inner{
+    position: fixed;
+    top: 40;
+    width: 100%;
+    z-index: 10;
+
+}
+/* 헤더 gnb */
+header .header-inner .group-flex{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 56px;
+}
+
+.header-inner .group-flex .logo{ position: absolute; top: 50%;left: 50%; transform: translate(-50%, -50%); }
+.header-inner .group-flex .logo svg{height: 23px;}
+.header-inner .group-flex .util-area{ display: flex;}
+.header-inner .group-flex .btn-cart{position: relative;}
+.header-inner .group-flex .btn-cart .curr{
+    position: absolute;
+    top: 15px;right: 4px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 10;
+}
+.header-inner .group-flex .btn-cart::after{
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 14px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    
+}
+.pop-search{ 
+    display: none;
+    position: fixed;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    background: url(https://m.andar.co.kr/web/andar/img/mobile/search-bg/230217.jpg) no-repeat center/cover; 
+}
+.pop-search.on{ 
+    display: block;
+}
+.pop-search .btn-prev::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 10px;
+    height: 18px;
+    padding: 18px 4.17%;
+    background: url(https://m.andar.co.kr/_wisa/img/button/close_search.png) no-repeat center/10px auto;
+    font-size: 0;
+
+} 
+.pop-search .search-area{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 0 10%;
+}
+.pop-search .search-area fieldset{
+    position: relative;
+}
+.pop-search fieldset .under-bd{
+    width: 100%;
+    height: 43px;
+    margin: 0;
+    border-bottom: 2px solid #fff;
+    background: none;
+
+}
+.pop-search fieldset .input{
+    color: #fff;
+    height: 43px;
+}
+.pop-search fieldset ::placeholder{
+    color: #fff;
+}
+
+.pop-search label{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 43px;
+    letter-spacing: -0.5px;
+}
+.pop-search fieldset .btn{
+    position: absolute;
+    bottom: 15px;right: 0;
+    width: 19px;height: 19px;
+}
+
+
+header .header-inner .group-flex [class*="btn-"]{ display: flex; padding: 0 10px; align-items: center; }
+
+/* group-nav */
+header .header-inner .gnb{
+    opacity: 1;
+    visibility: hidden;
+}
+header .header-inner .group-nav{
+    background: #fff;
+    /* display: none; */
+    height: 45px;
+}
+
+header .header-inner .group-nav .all-text{ /* 전체메뉴  */ position: absolute; top: 0;left: 0; display: none; }
+
+header .header-inner .group-nav .nav-list{ font-size: 16px; display: flex; gap: 10px; line-height: 23px; width: calc(100% - 30px);/* 화살표사이즈 빼기  */ overflow-x: auto; -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ padding: 11px 0 11px 15px; }
+header .header-inner .group-nav .nav-list::-webkit-scrollbar { display: none; /* Chrome, Safari, Opera*/ }
+header .header-inner .group-nav .nav-item{ }
+header .header-inner .group-nav .btn-more::after{
+   
+    /*위치 때려맞춤*/ position: absolute; 
+    right: 10px; 
+    top: 73px; 
+    width: 12px;
+    height: 12px; 
+    content: ''; 
+    background-image: url(https://m.andar.co.kr/common/mo/btn_open_middle_bk.png); 
+    background-size: 12px auto;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+    
+
+
+header .header-inner .group-all{background: #999; /* display: none;} */ }
+
+
+/* 스크롤시 고정 */
+.header.fixed .header-inner{ top: 0; background: #fff; } 
+.header.fixed .header-inner svg path{ fill:#000 }
+.header.fixed .header-inner svg path{} 
+.header.fixed .header-inner .gnb{ display: block; opacity: 1; visibility: visible; } 
+/* 메뉴 더보기 눌렀을 때 */
+.header-inner .group-nav.hide .btn-more::after{
+    transform: rotate(180deg);
+}
+.header-inner .group-nav.hide .all-text{
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 30px;
+}
+.header-inner .group-nav.hide .nav-list{
+    display: none;
+
+
+}
+.header-inner .group-nav.hide .btn-more::after{
+     /* 안나와.. */
+    /* width: 28px;height:28px;
+    
+    content: ''; 
+    background-image: url(https://m.andar.co.kr/common/mo/btn_open_middle_bk.pnghttps://m.andar.co.kr/common/mo/btn_open_middle_bk.png);
+    background-position: center;
+    background-color:yellowgreen;
+} */
+}
+
+
+
+
+header .header-inner .gnb{
+    display: none;
+}
+header .header-inner .group-all{
+   display: none;
+}
+header .header-inner .group-all .nav-list{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 15px;
+    *max-height: 145px;
+    
+    background: #F6F6F6;
+    border-top: 1px solid #dcdcdc;
+}
+header .header-inner .group-all .nav-item{
+}
+header .header-inner .group-all .nav-item a{ display: block; padding: 8px 17px; margin: 3px 3px; border: 1px solid #ebebeb; border-radius: 100px; background: #fff; font-size: 14px; line-height: 20px; color: #000; letter-spacing: -0.05em; }
+header.on::after{ content: ''; position: fixed; top: 0;left: 0;width: 100%; height: 100%; background: #000; opacity: 0.5; z-index: 11; }
+.side-nav{ visibility: hidden; 
+    position: fixed; top: 0; left: -82%;
+     width: 82%; height: 100%;
+      background-color: #fff; 
+      font-size: 11px; z-index: 12; 
+      transition: 0.3s;; overflow-y: auto; }
+.side-nav.on{
+    left: 0;
+    visibility: visible;
+}
+.side-nav .btn-close{}
+.side-nav .btn-close::after{ content: ''; background-image: url(https://m.andar.co.kr/common/mo/icon_close.png); position: absolute; display: block; top: 32px; right: 16px; width: 24px; height: 24px; background-size: 100% auto; }
+.side-nav .inner{ padding: 0 16px; }
+.side-nav .group-login{ height: 116px; position: relative; padding: 32px 16px 14px; border-bottom: 1px solid #ddd; }
+.side-nav .group-login a{ width: auto; height: auto; padding: 10px 26px; font-size: 14px; line-height: 14px; color: #fff; font-weight: 700; border-radius: 4px; color: #333; border: 1px solid #ccc; }
+.side-nav .group-login .login{ background: #0e0e0e; color: #fff; margin-right: 6px; border: 0px solid #ccc; }
+.side-nav .group-login span{ font-size: 13px; display: flex; line-height: 34px; color: #77797E; margin-top: 20px; }
+.side-nav .group-login em{ font-weight: 700; }
+.side-nav .group-nav{ position: relative; display: block; 
+    padding: 15px 0; color: #333; font-size: 16px;
+    font-weight: 500;
+     line-height: 16px; font-weight: 500; border-bottom: 1px solid #ddd;;}
+.side-nav .group-nav li{ position: relative; }
+
+/* .side-nav .group-nav li+li{padding-top: 10px;} */
+.side-nav .nav, .none{ position: relative; display: block; padding: 15px 0; color: #333; font-size: 16px; line-height: 16px; font-weight: 500; }
+.side-nav .group-nav .dot::after{ content: ""; position: absolute; display: inline-block; width: 6px; height: 6px; background: #EE5728; border-radius: 50%; top: 13px; left: 52px; z-index: 100; }
+.side-nav .group-nav .nav::after{ 
+    content: '';
+    position: absolute; top: 0;right: 0;
+     display: block; transition-duration: .3s; 
+         margin: 13px 0 0 3px;
+     width: 30px; height: 28px; 
+     background: url(https://m.andar.co.kr/common/mo/btn_open.png) no-repeat center/28px auto; } 
+.side-nav .group-nav .nav.on::after{ 
+    transform: rotate(180deg);
+    content: '';
+    position: absolute; top: 0;right: 0;
+     display: block; transition-duration: .3s; 
+     width: 30px; height: 28px; 
+     background: url(https://m.andar.co.kr/common/mo/btn_open.png) no-repeat center/28px auto; } 
+
+/* on 화살표 들어갔을때 !  */
+.side-nav .group-nav .nav.on{
+    /* background: #999;  */
+    
+}     
+
+.side-nav .group-nav .sub{ display: none; color: #848484; font-weight: 400;}    
+.side-nav .group-nav .sub li{
+    display: block;
+    color: #848484;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: -0.5px;
+}    
+.side-nav .group-nav .sub li a{
+    padding: 11px 0;
+    line-height: 37px;
+}    
+.side-nav .group-nav .sub.on{
+    display: block;
+}    
+
+
+
+
+
+
+.group-event .event{ padding: 20px 0 16px; font-size: 17px; }
+.group-event li{margin-bottom: 30px;}
+.group-event .title, .group-recent .title{ margin: 12px 0 6px; font-size: 15px; }
+.group-event .desc{ display: flex; position: relative; font-size: 13px; line-height: 16px; letter-spacing: -0.02em; font-weight: 400; color: #777; }
+.group-event .link-more{position: absolute; top: -22px;right: 0;}
+
+.group-link{ display: flex; 
+    justify-content: space-between;
+     position: relative; 
+     text-align: center; 
+     background: #F2F2F2;
+      font-size: 14px; line-height: 16px; 
+      letter-spacing: -0.02em; 
+      font-weight: 400; 
+      color: #777;}
+.group-link a{ 
+    flex: 1;
+    position: relative; 
+    width: 254px; display: block; 
+    padding: 14px 0; }
+.group-link .bar::after{ 
+    display: block;
+    position: absolute; 
+    top: 50%; right: 0; 
+    content: ''; 
+    background: #ccc;
+    width: 1px;
+    transform: translate(0,-50%); 
+    height: 16px;}
+
+.group-recent{ padding: 30px 0 70px;}
+.group-recent ul{display: flex;gap: 14px;;padding: 20px 0;}
+.group-recent img{width: 70px;height: 104px;}
+.group-recent .link-more{ position: relative; display: inline-block; border: 1px solid #ccc; border-radius: 2px; padding: 10px 48px 10px 18px; box-sizing: border-box; color: #777; font-size: 13px; line-height: 18px; font-weight: 400; letter-spacing: -0.03em; }
+.group-recent .link-more::after{ content: ''; /* background-image: url(https://m.andar.co.kr/common/more_btn.png); */ display: block; position: absolute; right: 20px; top: 10px; width: 25px; height: 15px; background: url(https://m.andar.co.kr/common/more_btn.png) no-repeat; background-size: 15px auto; background-position: right center; }
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{position: relative; ;color: #555; margin: 0; background: #fafafa; padding: 30px 16px 30px; }
+
+.footer .group-brand{ }
+.footer .group-brand .logo{
+     width: 90px; height: 24px;
+     margin-bottom: 10px;
+     display: block;
+    }
+
+.footer .group-brand .title{ color: #555; font-family: 'Gilroy','NotoSansKR',sans-serif; line-height: 20px; font-size: 14px; }
+
+.footer .group-operate{ padding: 24px 0 20px; color: #555;}
+.footer .group-operate .center{ display: block; font-size: 13px;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+   }
+.footer .group-operate .center .tel{
+     font-size: 18px;
+     display: block;
+     padding: 5px 0 10px; 
+     line-height: 21px;
+     font-weight: 700;}
+.footer .group-operate .hour{font-size: 13px;}
+.footer .group-operate .lunch{ display: block; padding-top: 5px; font-size: 13px;}
+
+.footer .group-sns{ display: flex; gap: 25px; }
+.footer .group-sns a{ }
+.footer .group-sns .ic-face{ background-image: url(https://m.andar.co.kr/common/mo/icon_facebook.png); background-size: 12px 22px; width: 12px;height: 22px; display: block; }
+.footer .group-sns .ic-youtube{ background-image: url(https://m.andar.co.kr/common/mo/icon_YouTube.png); width: 22px;height: 22px; background-size: 22px 22px; display: block; }
+.footer .group-sns .ic-insta{ background-image: url(https://m.andar.co.kr/common/mo/icon_Instagram.png); width: 22px;height: 22px; background-size: 22px 22px; display: block; }
+
+.group-policy{ font-size: 12px;; font-weight: 600; color: #777;}
+.group-policy ul{ display: flex; gap: 10px; align-items: center;}
+.group-policy li{
+    padding: 12px 0;
+display: flex;
+align-items: center;}
+.group-policy li+li{}
+.group-policy li+li::before{ 
+    display: flex;
+    content: '';
+    height: 10px;
+     width: 1px; 
+     background: #ccc;
+     margin-right: 10px; 
+    display: block;
+    top: 0;
+    }
+.group-policy li a{padding: 4px 0px;}
+
+.footer .group-company{ font-size: 11px; color: #777; }
+.footer .group-company p{ line-height: 21px; }
+.footer .group-company span{ display: inline-block; line-height: 13px; font-weight: 400; }
+/* .footer .group-company span+span::after{
+    content: '';
+    display: block;
+    width: 1px;border: 1px solid #000;
+    height: 13px;
+    margin: 0 10px;
+} */
+.footer .group-company .help{ display: block; line-height: 13px; }
+.footer .group-company a{ display: block; line-height: 21px; }
+
+.footer .group-copy{ display: block; font-size: 11px; color: #777; padding: 30px 0 24px; }
+
+.footer .group-support{ display: flex; gap: 20px; }
+
+
+
+.footer .group-support .link-ftc{
+   width: 45px;height: 34px;
+}
+.footer .group-support .link-sym{
+    width: 36px;height: 38px;
+}
+.footer .group-support .link-kg{
+    width: 27px;height: 31px;
+}
+
+.group-fixed-top{
+    position: fixed;
+    right: 10px;
+    bottom: -100%;
+    z-index: 20;
+    width: 50px;
+    border: 1px solid #e9e9e9;
+    background-color: rgba(255,255,255,0.7);
+    transition: 1s;
+}
+.group-fixed-top.show{
+    bottom: 50px;
+    opacity: 1;
+}
+.group-fixed-top ul li{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 50px;
+    /* background: #f0f; */
+}
+.group-fixed-top ul li+li{ border-top: 1px solid #e9e9e9;}
+.group-fixed-top .btn-kakao{
+    display: block;
+    background-image: url(https://m.andar.co.kr/common/mo/kakao_chat.png);
+    background-repeat: no-repeat;
+    background-size: 36px 30px;
+    margin-top: 4px;
+    
+}
+.group-fixed-top .btn-kakao span{
+    text-align: center;
+    font-size: 10px;
+    padding-top: 34px;
+    display: block;
+}
+.group-fixed-top .btn-top{
+    margin: 0 auto;
+    height: 38px;
+    display: block;
+    padding: 24px 20px 14px;
+    box-sizing: border-box;
+    background-image: url(https://m.andar.co.kr/common/mo/btn_top.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 19px auto;
+}
+

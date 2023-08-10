@@ -1,0 +1,490 @@
+/* visual slide */
+.sc-visual{
+   height: calc(100vh - 140px);
+   min-height: 480px;
+}
+.sc-visual .visual-slide{
+    height: 100%;
+}
+.sc-visual .swiper-slide a{
+    display: block;
+    height: 100%;
+}
+.sc-visual .swiper-slide img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.sc-visual .text-box{
+    color: #fff;
+    position: absolute;
+    bottom: 0;left: 0;
+    padding: 100px 35px;
+    width: 100%;
+}
+.sc-visual .text-box .title{
+    line-height: 1.3;
+    font-weight: 700;
+    font-size: 28px;
+    
+}
+.sc-visual .text-box .desc{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-top: 15px;
+    display: block;
+}
+.sc-visual .pagination{
+    /* swiper에 position:relati
+    ve 들어가있음 */
+    display: flex;
+    position: absolute;
+    width: 260px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 37px;
+    z-index: 1;
+}
+.sc-visual .pagination .swiper-pagination-bullet{
+    flex: 1;
+    margin: 0;
+    height: 2px;
+    border-radius:0;
+    background: #fff;
+}
+.sc-visual .pagination .swiper-pagination-bullet-active{
+   
+}swiper-pagination-bullet
+/* 비주얼 스크롤바 */
+.swiper-scrollbar{
+    position: absolute;
+    bottom: 10px;
+    width: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    color: #fff;
+}
+.swiper-scrollbar .scrollbar-bullet{
+    width: 15px; height: 5px;
+    color: #fff;
+    display: block;
+    }
+    
+.sc-product{}
+/* 레이아웃 말고 디테일 공통 */
+.prd-list{}
+.prd-list .prd-item{}
+.prd-list .prd-item .thumb-box{
+    position: relative;
+}
+.prd-list .prd-item .badge{ display: flex; position: absolute; top: 0;left: 0; }
+.prd-list .prd-item .badge img{width: 37px;}
+.prd-list .prd-item .thumb-box .rank{
+    line-height: 24px;
+    text-align: center;
+    width: 25px;
+    height: 24px;
+    background:#1b1b1b;
+    font-size: 14px;
+    color: #fff;
+}
+.prd-list .prd-item .thumb-box .img{width: 100%;}
+.prd-list .text-box{    padding: 15px 5% 0;}
+.prd-list .text-box .review{color: #8e1f29; font-size: 13px; font-weight: 600; line-height: 1;}
+.prd-list .text-box .title{ color: #333; font-size: 14px; line-height: 17px; margin: 10px 0; }
+
+.prd-list .text-box .price{
+    margin-bottom: 10px;
+}
+.prd-list .text-box .sale{
+    color: #8E1F29 ; font-weight: 500;
+    margin-right: 5px;  }
+.prd-list .text-box .curr{font-size: 15px; line-height: 16px; font-weight: 500; letter-spacing: -0.03em; vertical-align: top;}
+.prd-list .text-box .ori{ font-size: 13px; line-height: 18px; font-weight: 400; color: #8d8d8d; margin-left: 5px; text-decoration-line: line-through;}
+.prd-list .text-box [class*="hit"]{
+    border: 1px solid rgba(142,31,41,0.5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px 10px 4px 6px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    line-height: 1;
+    opacity: 1;
+   font-size: 12px;
+   color: #8e1f28;
+}
+/* 틀 구성1 */
+.prd-list.type1{
+    display: flex; flex-wrap: wrap; gap: 14px; 
+}
+.prd-list.type1 .prd-item{
+    width: calc(50% - 7px); 
+    padding-bottom: 40px;}
+.prd-list.type1 .prd-item img{
+    width: 100%;
+}
+
+
+/* 틀 구성2 */
+.prd-list.type2{ padding: 0 16px; }
+.prd-list.type2 .prd-item{ padding: 20px 0; }
+.prd-list.type2 .prd-item+.prd-item{ border-top: 1px solid #eee; }
+.prd-list.type2 .prd-item .prd{ display: flex; }
+.prd-list.type2 .prd-item .thumb-box{ width: 110px; }
+.prd-list.type2 .prd-item .text-box{ flex: 1; padding: 0 28px; }
+.prd-list.type2 .prd-item .review{ margin-top: 10px; }
+.prd-list.type2 .prd-item .title{}
+
+
+
+
+
+
+
+
+
+.sc-product{}
+.sc-product h2{ text-align: center; padding: 50px 16px 22px; font-size: 20px; line-height: 29px; color: #333; letter-spacing: -0.05em; font-weight: 700; }
+.sc-product .cate-list{ display: flex; margin-bottom: 22px; padding: 0 16px; gap: 10px;}
+.sc-product .cate-item a{display: block; ;padding: 9px 10px; font-weight: 500; font-size: 15px; color: #77797E; }
+.sc-product .cate-item.active a{ display: block; font-weight: 700; color: #FFFFFF; background: #B75622; border-radius: 60px; }
+
+
+
+.sc-product .tab-con{}
+.sc-product .tab-con .prd-list{display: none;}
+.sc-product .tab-con .prd-list.active{display: flex;}
+.sc-product .link-more{
+    margin: 50px 16px 60px;
+    text-align: center;
+    padding: 16px 0;
+    border: 1px solid #C8CBD2;
+    border-radius: 4px;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+}
+.sc-product .link-more::after{
+    content: '';
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;height: 16px;
+    background-image: url(https://m.andar.co.kr/iv/arrow_right.png);
+}
+.sc-product .text-box .hit3{}
+.sc-product .link-more .col{
+    color: #C86733;
+}
+.sc-product .newlink-more{
+    display: block;
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    background: #fff;
+    font-size: 15px;
+    color: #222;
+    font-weight: 500;
+    text-align: center;
+    
+}
+/* .sc-product .newlink-more span{
+    display: block;
+    background: #f0f;
+}
+.sc-product .newlink-more span::after{
+    display: block;
+    padding-left: 5px;
+    width: 19px;
+    height: 19px;
+    background: url(https://m.andar.co.kr/common/mo/go_cate.png) no-repeat;
+    background-size: 19px auto;
+} */
+.sc-product .newlink-more::after{
+    content: '';
+    display: inline-block;
+    width: 19px;
+    vertical-align: text-bottom;
+    height: 19px;
+    line-height: 19px;  
+    background: url(https://m.andar.co.kr/common/mo/go_cate.png) no-repeat;
+    background-size: 19px auto; */
+    /* background-position: center;*/
+    
+}
+
+
+
+/* 쿠폰배너 */
+.sc-coupon{
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto 120px;
+}
+
+.group-prd a{
+    position: relative;
+}
+/* sc-theme  */
+
+.sc-theme{ }
+.sc-theme .group-theme{}
+.sc-theme .intro-area{
+  
+}
+.sc-theme .intro-area .thumb-box{}
+.sc-theme .intro-area .thumb-box .img{}
+.sc-theme .intro-area .text-box{
+    display: block;
+    box-sizing: border-box;
+    padding: 20px 16px 20px;
+}
+.sc-theme .intro-area .text-box .title{
+    font-size: 26px;
+    line-height: 35px;
+    color: #333;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+}
+
+.sc-theme .intro-area .text-box .desc{
+    padding: 14px 0 28px;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.05em;
+    color: #333;
+    font-weight: 400;
+}
+.sc-theme .intro-area .text-box .link-more{
+    position: relative;
+    display: inline-block;
+    background-color: #1e1e1e;
+    border-radius: 2px;
+    border: 1px solid #1e1e1e;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 8px 47px 8px 18px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    
+}
+.sc-theme .intro-area .text-box .link-more::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 15px;height: 15px;
+    background-image: url(https://m.andar.co.kr/common/mo/Icon_move.png);
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    right: 17px;
+    top: 14px;
+}
+
+
+/* <section class="sc-coupon"> */
+.sc-coupon{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* <section class="sc-brandstory"> 브랜드스토리 ㅠㅠ*/
+
+.sc-brandstory{
+    margin-top: 65px;
+    padding: 56px 20px;
+    background-color: #C86733;
+    color: #fff;
+}
+.sc-brandstory .text-box{
+    
+}
+.sc-brandstory .text-box h2{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    margin: 0 auto 10px;
+    font-weight: 400;
+    display: inline-block;
+    border-bottom: 1.5px solid #fff;
+    padding-bottom: 5px;
+    line-height: 1.2;
+}
+.sc-brandstory .text-box .title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+.sc-brandstory .text-box .desc{
+    padding: 10px 0 5px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #fff;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+.sc-brandstory .text-box .link-more{
+    display: inline-block;
+    width: 100px;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+}
+
+/* 레깅스 */
+
+.group-cate{
+    position: relative;
+    padding-left: 20px;
+}
+.group-cate .group-cate{padding-left: 20px;}
+.group-cate h3{
+    display: inline-block;
+    padding: 30px 0;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+}
+.group-cate .link-more{
+    position: absolute;
+    top: 0;right: 0;
+    display: inline-block;
+    top: 30px;
+    right: 5%;
+    padding: 0 5px;
+}
+.group-cate .link-more::after{
+    display: inline-block;
+    content: '';
+    width: 15px;height: 11px;
+    margin-left: 3px;
+    margin-bottom: 2px;
+    background-image: url(https://m.andar.co.kr/common/mo/icon-move-gr.png) ;
+    background-repeat: no-repeat;
+    background-size: 15px auto;
+    background-position: center;
+
+}
+.group-cate .swiper-wrapper{
+    display: flex;
+    gap: 10px;
+}
+.group-cate .swiper-wrapper .swiper-slide{}
+.group-cate .swiper-slide .text-box{
+    padding: 15px 0;
+}
+.group-cate .swiper-slide img{
+    width: 100%;
+    object-fit: cover;
+}
+.group-cate .swiper-slide .text-box .review{
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 400;
+    color: #8e1f29;
+}
+.group-cate .swiper-slide .text-box .title{
+    color: #333 !important;
+    font-size: 14px;
+    line-height: 17px;
+}
+.group-cate .swiper-slide .text-box .price{
+    color: #333 !important;
+    padding: 0;
+    font-size: 15px !important;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    vertical-align: top;
+}
+.group-cate .swiper-slide .text-box .discount{
+    color: #8E1F29 !important;
+    font-weight: 500 !important;
+    margin-right: 5px;
+
+
+
+
+    vertical-align: top;
+}
+
+.group-cate .swiper-slide .text-box .origin{
+    font-size: 13px !important;
+    line-height: 18px !important;
+    font-weight: 400 !important;
+    color: #8d8d8d !important;
+    margin-left: 5px;
+    text-decoration: line-through;
+}
+
+
+
+/* 멤버십 & 오프라인스토어안내 */
+
+
+.sc-banner{
+}    
+.sc-banner.membership{
+    padding-top: 70px;
+    
+}
+.sc-banner .group-banner{
+    margin-top: 10px;
+}
+.sc-banner .group-banner a{
+    position: relative;
+}
+
+
+.sc-banner .group-banner img{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.sc-banner .group-banner .text-box{
+    padding: 65px 20px;
+    color: #fff;
+    
+}
+.sc-banner .group-banner .text-box .title{
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+.sc-banner .group-banner .text-box .desc{
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #fff;
+    padding: 15px 0 30px;
+}
+.sc-banner .group-banner .text-box .link-more{ border: 1px solid #fff; padding: 7px 25px 8px; color: #fff; font-size: 15px; line-height: 18px; letter-spacing: -0.03em; display: inline-block; box-sizing: border-box; }
+
+.sc-banner.guide{
+    margin-top: 10px;
+}

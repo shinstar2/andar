@@ -1,0 +1,59 @@
+/* 
+ttf [트루타입]       - >웹용으로 지원되는 버전은 낮기때문에 지원범위가 x
+otf [오픈트루타입]
+
+eot [익스플로러] x
+
+woff [웹오픈폰트포맷] ->모던브라우저
+woff2 [웹오픈폰트포맷] ->woff에서 최대50%압축 
+
+ 검색예시ex ) ttf 지원범위 , ttf에서 wof로... .. . 
+ 
+ */
+
+
+
+/* ttf 지원범위 */
+
+@font-face{
+    font-family:'Gilroy';
+    src:url(../font/Gilroy-Regular.woff2) format('woff2');
+    font-weight: 400;
+}
+@font-face{
+    font-family:'Gilroy';
+    src:url(../font/Gilroy-Medium.woff2) format('woff2');
+    font-weight: 500;
+}
+@font-face{
+    font-family:'Gilroy';
+    src:url(../font/Gilroy-SemiBold.woff2) format('woff2');
+    font-weight: 600;
+}
+@font-face{
+    font-family:'Gilroy';
+    src:url(../font/Gilroy-Bold.woff2) format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'noto';
+    src: url(../font/NotoSansKR-Light-Hestia.woff) format('woff');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'noto';
+    src: url(../font/NotoSansKR-Regular-Hestia.woff) format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'noto';
+    src: url(../font/NotoSansKR-Medium-Hestia.woff) format('woff');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'noto';
+    src: url(../font/NotoSansKR-Bold-Hestia.woff) format('woff');
+    font-weight: 700;
+}
+
